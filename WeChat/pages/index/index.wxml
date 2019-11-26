@@ -1,0 +1,37 @@
+  <!-- <swiper class="section hero white" indicator-dots="{{true}}">
+  <!-- swiper是小程序提供的组件，可以用它来滑动。//显示小点  插入值用两个{{}}-->
+
+  <!-- <swiper-item wx:for="{{slides}}"> 
+   <image src="{{item.image}}"
+   <view class="header">{{item.header}}</view>
+  </swiper-item>
+  </swiper> --> 
+  <!-- swiper是小程序提供的组件, 滑动了  -->
+<!-- <swiper class="section hero white" indicator-dots="{{true}}">
+  <swiper-item wx:for="{{slides}}"> 
+    <image src="{{item.image}}"/>
+      <view class="content cenered">
+      <view class="sub-header"{{item.sub_header}}></view>
+      <view class="description">{{item.description}}</view>
+      <view class="header">{{item.header}}</view>
+      <view class="action">
+        <b class="button">预约试驾</b>
+      </view>
+    </view>
+  </swiper-item> -->
+<!-- </swiper> -->
+<!-- swiper是小程序提供的组件, 滑动了  -->
+<swiper class="section hero white" indicator-dots="{{true}}">
+  <swiper-item wx:for="{{slides}}"> 
+    <image src="{{item.image}}"/>
+    <view class="content centered">
+      <view class="sub-header">{{item.sub_header}}</view>
+      <view class="header">{{item.header}}</view>
+      <view class="description">{{item.description}}</view>
+      <view class="action">
+        <button class="button " bindtap="testDrive">预约试驾</button>
+        <button class="button primary" bindtap="readMore" data-id="{{item.id}}">了解更多</button>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

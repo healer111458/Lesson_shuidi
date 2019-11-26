@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>刘功明泡妞记</title>
+</head>
+
+<body>
+    <script>
+        //对象
+        class Flower {
+            constructor(type, n) {//构造函数 new 运行
+                this.type = type;//属性
+                this.n = n;
+            }
+        }
+        // alert('先取功名，再成家');
+        var gongming = {
+            name: '刘功明',
+            age: 21,
+            favorites: ['代码', '看书', '打撸'],
+            room: 1114,
+            hometown: '赣州兴国',
+            yz: 70,
+            isSingle: true,
+            sendFlower: function (target) {
+                var flower = new Flower('红玫瑰', 11);
+                console.log(flower.type, flower.n)
+                target.receiveFlower(this, flower);
+            }
+        }
+        var xiaohong = {
+            name: '小红',
+            age: 21,
+            isgoodmod: false,//心情不好
+            favorites: '男的就行',
+            receiveFlower: function (sender, flower) {
+                if (sender.yz < 90) {
+                    console.log('丑拒');
+                    if (this.isgoodmod = false) {
+                        console.log('心情不好')
+                    }
+                    //console.log用来输出，和alert差不多，但是不会打断函数的运行。
+                }
+                else {
+                    console.log('万达走一波');
+
+                }
+                // console.log(sender, Flower);
+
+            }
+        }
+        var xiaomei = {
+            hometown: '赣州兴国',
+            receiveFlower: function (sender, flower) {
+                if (sender.name == '刘功明') {
+                    console.log('明哥哥， 还是我们在一起吧。。。。');
+
+                } else {
+                    xiaohong.receiveFlower(sender, flower);
+                }
+                //定时器
+                setTimeout(function () {
+                    xiaohong.isgoodmod = true;
+                    xiaohong.receiveFlower(sender, flower);
+
+                }, 1000)
+            }
+
+        }
+
+        gongming.sendFlower(xiaomei);
+
+    </script>
+
+</body>
+
+</html>

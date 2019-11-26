@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 写一函数 -->
+    <script>
+        function performanceS(salary) {
+            return salary * 24
+        }
+        function performanceA(salary) {
+            return salary * 18
+        }
+
+        function performanceB(salary) {
+            return salary * 16
+        }
+
+        function performanceC(salary) {
+            return salary * 14
+        }
+
+        function performanceD(salary) {
+            return salary * 13
+        }
+        function performanceMVP(salary) {
+            return salary * 112
+        }
+
+        function bouns(salary, performanceLevel) {
+            if (performanceLevel == 'S') {
+                return performanceS(salary);
+            }
+            if (performanceLevel == 'A') {
+                return performanceA(salary);
+            }
+            if (performanceLevel == 'B') {
+                return performanceB(salary);
+            }
+            if (performanceLevel == 'C') {
+                return performanceC(salary);
+            }
+            if (performanceLevel == 'D') {
+                return performanceD(salary);
+            }
+            if (performanceLevel == 'MVP') {
+                return performanceMVP(salary);
+            }
+
+
+        }
+
+        // S 12
+        // A 6
+        // B 4
+        // C 2
+        // D 1
+        // salary 
+        /*
+        * @param salary{number}
+        * @param type {string=类型}
+        * @return {number=工资}
+        */
+        // window.onload = function () {//局部作用域
+        //     function bouns(salary, type) {
+        //         let total = 0;
+        //         switch (type) {
+        //             case 'S':
+        //                 total = salary * 12 + salary * 12;
+        //                 break;
+        //             case 'A':
+        //                 total = salary * 12 + salary * 6;
+        //                 break;
+        //             case 'B':
+        //                 total = salary * 12 + salary * 4;
+        //                 break;
+        //             case 'C':
+        //                 total = salary * 12 + salary * 2;
+        //                 break;
+        //             case 'D':
+        //                 total = salary * 12 + salary;
+        //                 break;
+
+        //         }
+        //         return total;
+
+
+        //     }
+        //     bouns.log(bouns(20000,'S'))
+
+        // }
+        // // window.bouns
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

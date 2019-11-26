@@ -1,0 +1,6 @@
+.section{
+  /* vh相对单位 不管什么设备 手机 按照百分比
+  height: 100vh;
+*/height:100vh;
+  /* background-color: white; */
+}

@@ -1,0 +1,6 @@
+ .section {
+  /* 相对单位 不管什么设备，响应用户 手机
+  100vh 占据整个高度  */
+  height: 100vh; /*等比划分*/
+  /* background-color: red; */
+}

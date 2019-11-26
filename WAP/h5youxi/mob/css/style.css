@@ -1,0 +1,107 @@
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, button, textarea, p, blockquote { margin: 0; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+li { list-style: none; }
+img { border: 0; }
+a{ outline:none; color:#313131; text-decoration:none;}
+.cl:after{ content:'\20'; display:block; height:0; clear:both; }
+.cl{ *zoom:1;} 
+/*content*/
+#menu,.header .search,.gamelist li .btn_down,.footer a,.back_nav .back,.readlist li,.star,.star i,.game_search .text,.game_search .btn{ background:url(../images/sprite.png) no-repeat 0 0; background-size:60px 174px;}
+body{min-width:320px;background:#f8f8f8;font:12px/1.5 "Microsoft Yahei","Arial"; color:#888;-webkit-text-size-adjust:none}
+.main{width:100%;max-width:768px; min-height:176px;margin:0 auto; position:relative; overflow:hidden;}
+.header{ padding:13px 0; text-align:center; border-bottom:1px solid #dcdcdc; position:relative;}
+.header .logo{ display:block; margin:0 auto; height:19px;}
+.header #menu{ float:left; margin-left:4%;}
+#menu{ width:21px; height:19px; font:0/0 a; background-position:-39px 2px; cursor:pointer;}
+#guide{ position:absolute; left:0; top:45px; z-index:999; background:#f8f8f8; width:100%; overflow:hidden; display:none;box-shadow: 0px 2px 2px #666;}
+#guide ul{ overflow:hidden; margin-left:-1px; border-bottom:1px solid #fff; border-bottom:1px solid #dcdcdc;}
+#guide li{ float:left; width:25%; text-align:center; border-left:1px solid #dcdcdc; border-top:1px solid #dcdcdc; margin-left:-1px;}
+#guide li a{ color:#4398d1; display:block; border-left:1px solid #fff; border-top:1px solid #fff; line-height:63px; font-size:16px;}
+#overlay{ width:100%; height:100%; position:absolute; left:0; top:45px; background:rgba(0, 0, 0, 0.1); z-index:200; display:none;}
+#overlay.show{ display:block;}
+.header .search{ float:right; width:18px; height:19px; font:0/0 a; background-position:-42px -17px; margin-right:4%;}
+.index-banner{position:relative;overflow:hidden;-webkit-backface-visibility:hidden;z-index:1;width:100%}
+.index-banner .swiper-wrapper li{float:left}
+.index-banner .swiper-wrapper li img{width:100%;height:100%; display:none;}
+.index-banner .index-pagination{position:absolute;right:0px;bottom:0;width:100%;background:rgba(0, 0, 0, 0.6);height:20%}
+.index-banner .index-pagination span{width:2.8%;height:34%;margin-top:2.6%;margin-right:2%;border-radius:50%;background:#797979;float:right;display:inline-block;}
+.index-banner .index-pagination span.swiper-active-switch{background:#fff;}
+.index-banner .banner-title{position:absolute;left:3%;bottom:3.6%;color:#fff;font-size:1.6em;z-index:100;}
+.nav{overflow:hidden; margin:17px 10px 10px;}
+.nav li{float:left; width:20%;}
+.nav li a{ display:block; padding-top:50px; line-height:28px; text-align:center; width:50px; margin:0 auto; background:url(../images/nav.png) no-repeat 0 0; background-size:250px 50px;}
+.nav .yyzx a{ background-position:-50px 0;}
+.nav .gldq a{ background-position:-100px 0;}
+.nav .xwzx a{ background-position:-150px 0;}
+.nav .jptj a{ background-position:-200px 0;}
+.box{ overflow:hidden;}
+.box .hd{ overflow:hidden; position:relative;}
+.box .hd ins{ float:left; width:8px; height:27px; background:#4398d1; border-top:2px solid #3287c0; border-bottom:3px solid #3287c0; margin-right:8px;}
+.box .hd .over{ border-top:1px solid #e0e0e0; border-bottom:2px solid #e0e0e0; height:29px; line-height:29px; background:#fbfbfb;}
+.box .hd .over h3{ font-weight:normal; color:#3287c0; border-top:1px solid #fff; line-height:27px; font-size:16px;}
+.box .hd .over .more{ float:right; color:#888; margin-right:10px; font-size:14px;}
+.gamelist{ overflow:hidden; margin:-1px 10px;}
+.gamelist li{ float:left; width:33.33%; text-align:center; padding:16px 0; border-bottom:1px solid #e0e0e0; border-top:1px solid #fff;}
+.gamelist li img{ display:block; margin:0 auto; border-radius:10px; width:75px; height:75px;}
+.gamelist li h3{ font-weight:normal; height:24px; line-height:24px; font-size:14px; margin-top:3px; overflow:hidden;}
+.gamelist li p{ line-height:18px; height:18px; overflow:hidden;}
+.gamelist li .btn_down{ display:block; width:54px; padding-left:21px; border-radius:3px; height:22px; line-height:22px; color:#fff; margin:6px auto 0; background-color:#4398d1; background-position:-44px -38px; text-align:left;}
+.newslist{ padding:0 10px; margin-bottom:-1px;}
+.newslist dt{ overflow:hidden;}
+.newslist dt ul{ margin:-1px 0 0;}
+.newslist dt li{ border-bottom:1px solid #e0e0e0; border-top:1px solid #fff; overflow:hidden; padding:14px 4px;}
+.newslist dt li img{ float:left; width:120px; height:80px; margin-right:9px;}
+.newslist dt li h3{ font-weight:normal; font-size:14px; line-height:20px; max-height:40px; overflow:hidden;}
+.newslist dt li p{ max-height:32px; line-height:16px; overflow:hidden; margin-top:6px;}
+.newslist dd ul{ padding:10px 4px 12px; border-top:1px solid #fff;}
+.newslist dd li{ line-height:26px; height:26px; overflow:hidden; font-size:14px;}
+.newslist dd li span{ margin-right:3px;}
+.newslist dd li span,.newslist dd li span a{ color:#888;}
+.footer{ text-align:center; padding:10px 0; line-height:14px; background:#fbfbfb; border-top:2px solid #dcdcdc; background:#fbfbfb;}
+.footer a{ display:inline-block; padding:0 10px; background-position:right -60px;}
+#return{ background:none;}
+.loading{ line-height:40px; text-align:center; border-top:1px solid #fff; margin:1px 10px 0;text-shadow: 0 1px 0 #fff; font-size:14px;}
+.back_nav{ height:29px; line-height:29px; font-size:18px; padding:8px 0; border-bottom:1px solid #dcdcdc; position:relative;}
+.back_nav .back{ float:left; margin-left:4%; padding-left:25px; background-position:-46px -132px; height:29px;}
+.back_nav #menu{ float:right; margin-right:4%; margin-top:5px;}
+.newsdetail{ margin:0 10px; border-bottom:1px solid #fff;}
+.newsdetail .title{ line-height:26px; padding:10px 0 8px; border-bottom:1px dashed #e0e0e0;}
+.newsdetail .title h1{ font-size:16px; line-height:22px; color:#313131;}
+.newsdetail .title p span{ margin-right:8px;}
+.newsdetail .article{ line-height:22px; padding:5px 0 15px; font-size:14px; border-top:1px dashed #fff; border-bottom:1px solid #e0e0e0; color:#313131;}
+.newsdetail .article img{ max-width:300px;}
+.newsdetail .article p{ margin-top:10px;}
+.container{ margin:10px 10px 0;}
+.container .hd{ height:16px; line-height:16px; padding:10px 4px;}
+.container .hd h3{ color:#4398d1; border-left:5px solid #4398d1; padding-left:8px; font-size:16px; font-weight:normal;}
+.container .hd .more{ float:right; color:#888; font-size:14px;}
+.readlist{ border-bottom:1px solid #fff;}
+.readlist ul{ padding:0 4px 10px; border-bottom:1px solid #e0e0e0;}
+.readlist li{ height:26px; line-height:26px; font-size:14px; overflow:hidden; padding-left:13px; background-position:-56px -159px;}
+.gamerec .gamelist{ padding-bottom:15px; margin:0;}
+.gamerec .gamelist li{ border:none; padding:10px 0 0;}
+.game_detail{ margin:5px 10px 0; padding:0 8px 10px; border-bottom:1px dashed #e0e0e0;}
+.game_detail dt{ float:left; width:75px; margin:11px 15px 0 0;}
+.game_detail dt img{ display:block; border-radius:10px; width:75px; height:75px;}
+.game_detail dt .btn_down{ display:block; width:75px; height:22px; line-height:22px; text-align:center; color:#fff; font-size:14px; background:#4398d1;border-radius:3px; margin-top:11px;}
+.game_detail dd{ font-size:14px; line-height:20px; height:20px; overflow:hidden;}
+.game_detail .title{ font-size:20px; line-height:30px; height:30px; overflow:hidden;}
+.star,.star i{ float:left; margin:4px 4px 0 0; width:60px; height:12px; background-position:0 -80px; font:0/0 a;}
+.star i{ margin:0; background-position:0 -92px;}
+.game_detail dd .score{ color:#ee0000; margin-right:3px;}
+.game_search{ position:relative; width:223px; margin:0 auto;}
+.game_search .text{ width:185px; height:29px; line-height:27px; background-color:#fff; border-radius:5px; border:none; padding-left:38px; display:block; color:#8e8e93; font-size:14px; background-position:-30px -104px;}
+.game_search .btn{ border:none; width:14px; height:14px; position:absolute; top:7px; right:7px;}
+.searchlist{ overflow:hidden; margin:0 10% 0 0; padding-bottom:20px;}
+.searchlist dt,.searchlist dd{ float:left; line-height:32px;}
+.searchlist dt{ width:90%; font-size:18px; color:#4398d1; margin:10px 0 5px 10%;}
+.searchlist dd{ font-size:16px; width:40%; margin-left:10%;}
+.profile{ font-size:14px; line-height:22px; margin:0 10px; color:#313131; border-bottom:1px solid #fff; border-top:1px dashed #fff;}
+.profile a{ color:#4398d1;}
+.profile h3,#game_img h3{ color:#4398d1; font-size:16px; font-weight:normal; padding:12px 0 7px;}
+.profile p{ border-bottom:1px solid #e0e0e0; padding-bottom:12px;}
+#game_img{ border-bottom:1px dashed #e0e0e0; border-top:1px dashed #fff; margin:0 10px;}
+#game_img .swiper-container { height:289px; margin:5px auto 20px;position:relative;overflow:hidden;z-index:1;}
+#game_img .swiper-slide{ height:289px;float:left;}
+#game_img .swiper-slide img { display:block; height:285px; border:1px solid #fff;box-shadow:2px 2px 2px #d8d8d8; margin:0 7px;}
