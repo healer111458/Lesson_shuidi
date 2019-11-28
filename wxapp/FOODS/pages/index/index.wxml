@@ -2,7 +2,7 @@
 <view
 wx:for="{{entities}}" class="media-box media-box_appmsg">
    <view class="media-box__hd     media-box__hd_in-appmsg">
-     <image class="media-box__thumb" src="{{item.imageUrl}}"></image>
+   <image class="media-box__thumb" src="{{item.imageUrl}}"></image>
    </view>
    <view class="media-box__bd">
     <view class="media-box__title">{{item.title}}</view>

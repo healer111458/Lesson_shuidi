@@ -1,7 +1,0 @@
- 新建了一个自己的开发分支，日常开发都应该这个分支上，不影响别人，等开发完成之后再将代码合并在主分支。
- 
- git branch xxx
- git checkout xxx
- git
-
- bug fixed
