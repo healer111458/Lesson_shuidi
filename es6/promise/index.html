@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id = 'fields'></div>
+    <script>
+    // <!-- 前端，
+    // 小程序端
+    // 页面只是模板 ejs，数据何来？
+    // js 主动拉取 fetch ajax(异步获取远程数据) -->
+    const streetCarPromise = fetch('https://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+    const postPromise = fetch('https://wesbos.com/wp-json/wp/v2/posts');
+    Promise
+      .all([streetCarPromise,postPromise])
+      .then(responses => {
+          //console.log(responses);
+          //返回promise
+          //1. json()   文件流数组 => json() 数组 map
+          //2. promise 数组  .then  
+          return Promise.all(responses.map(res => res.json()))
+      })
+      .then(responses => {
+          console.log(responses);
+      })
+    //  postPromise
+    //   .then(response =>response.json)
+    //   .then(data => {
+    //       console.log(data);
+    //   })
+    //等我去数据
+    // .then(response => response.json())
+    // //到达的事数据流
+    // .then(res => {   
+    //     const fields = res.datasets[0].fields;
+    //     console.log(fields);
+    //     document.getElementById('fields')
+    //     .innerHTML = fields
+
+    //     fields
+    //       .map(fields => `
+    //         <div>
+    //             ${fields.type}-${fields.name}
+    //         </div>`
+    //       ).join('')
+    //       //es6中 将josn中的数组转换为html的数组
+    // })
+    </script>
+</body>
+</html>
