@@ -1,0 +1,14 @@
+var makeSound = function(animal) {
+    //多态 只要对象具有统一的接口，那么可以互换使用
+    animal.say(); //面向对象优化
+}
+var Duck = function() {};
+Duck.prototype.say = function() {
+    console.log('嘎嘎嘎');
+}
+var Chicken = function() {};
+Chicken.prototype.say = function() {
+    console.log('咯咯咯');
+}
+makeSound(new Chicken());
+makeSound(new Duck());
