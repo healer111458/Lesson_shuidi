@@ -1,0 +1,46 @@
+Arguments: 
+  D:\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js start
+
+PATH: 
+  C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;D:\Git\cmd;D:\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  12.13.1
+
+Platform: 
+  win32 ia32
+
+Trace: 
+  SyntaxError: d:\workspace\Lesson_shuidi\docker\node\dockerstudy\package.json: Unexpected token } in JSON at position 141
+      at JSON.parse (<anonymous>)
+      at C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "dockerstudy",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+      "start": "nodemon bin/wwww",
+  
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "koa": "^2.11.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
