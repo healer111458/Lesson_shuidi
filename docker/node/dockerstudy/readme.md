@@ -20,4 +20,20 @@
 - logger
    koa-logger + app.use()
 - 出错模块
+- https://img.bosszhipin.com/    //图片域名
+  https://bosszhipin.com/        //网页域名   
+  静态资源  服务器端资源
+  - IP
+     静态资源   img.bosszhipin.com   dns解析->访问网络供应商（中国移动）->提供解析列表
+     互联网公司会在网络供应商机房中装载cdn  如果网络供应商本地没有->渠道中央服务器请求一次->缓存到供应商本地
+- koa-static
+- 表单提交
+   koa-bodyparser
+      GET  请求头  head url?a=1&b=2   //明文传输
+      POST  head[url body.length] + body
+
+## node的发布
+   docker 容器化
+    node项目，写完后->测试工程师（环境）
+   让项目再不同的机器里，享用相同的环境，跑起来  只需安装Docker
    
