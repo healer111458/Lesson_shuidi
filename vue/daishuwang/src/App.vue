@@ -39,7 +39,7 @@ export default {
     'v-header': header,
     'v-footer': footer
   },
-  // 生命周期 onLoad
+  // 生命周期 相当于onLoad
   created() {
     this.seller = Object.assign({}, this.seller, response.data)
     console.log(this.seller);
