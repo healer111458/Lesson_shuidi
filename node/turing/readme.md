@@ -1,5 +1,5 @@
 - node 的开发流程 
-  mpn init -y
+  npm init -y
   nodemailer tuling koa
   之后 package.json 拿到 dependencies
   reqiire
