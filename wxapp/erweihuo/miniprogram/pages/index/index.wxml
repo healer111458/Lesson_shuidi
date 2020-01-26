@@ -2,9 +2,8 @@
  <view class='page_row' bindtap="suo">  
     <view class="search">  
       <view class="df search_arr">  
-        <icon class="searchcion" size='20' type='search'></icon>  
-        <input class="" disabled placeholder="请输入店名" value="{{searchValue}}"/>  
-      <view class='sousuo'>搜索</view>  
+        <icon class="searchicon" size='20' type='search'></icon>  
+        <input class="sousuo" placeholder="请输入店名"/>   
       </view>  
     </view>  
  </view>  
