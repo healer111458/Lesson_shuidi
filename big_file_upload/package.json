@@ -1,0 +1,12 @@
+{
+  "name": "big_file_upload",
+  "version": "1.0.0",
+  "description": "文件上传是开发中的难点，大文件上传及断点续传  难点中的细节及核心技术。面试官再考察es6文件兑现、ajax上传、async、await、promise、后台文件存储、流操作等全面的全栈技能的同时，提升难度都大文件和断点续传，通过主题，就可以比较好的考察面试者全面解决问题的能力和技术细节。移动时代图片成为社交的主流，短视频时代也是大文件。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
