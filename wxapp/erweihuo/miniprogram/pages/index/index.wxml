@@ -5,6 +5,43 @@
         <icon class="searchicon" size='20' type='search'></icon>  
         <input class="sousuo" placeholder="请输入店名"/>   
       </view>  
-    </view>  
+    </view>
+     <view class='weui-cell '>
+      <!--下拉框  -->
+      <view class="weui-cell__bd dropdown" bindtap='bindShowMsg'>
+        <span class="dropbtn">分类</span>
+        <span class="jiantoudown"></span>
+        <!-- 下拉需要显示的列表 -->
+        <view class="dropdown-content" wx:if="{{select}}">
+          <block wx:for="{{infotype}}" wx:key="this" wx:for-item="item">
+            <view class="dropdown-item" bindtap="mySelect" data-name="{{index}}">{{item}}</view>
+          </block>
+        </view>
+      </view>
+
+      <!--下拉框  -->
+      <view class="weui-cell__bd dropdown" bindtap='bindShowMsg'>
+        <span class="dropbtn">附近</span>
+        <span class="jiantoudown"></span>
+        <!-- 下拉需要显示的列表 -->
+        <view class="dropdown-content" wx:if="{{select}}">
+          <block wx:for="{{infotype}}" wx:key="this" wx:for-item="item">
+            <view class="dropdown-item" bindtap="mySelect" data-name="{{index}}">{{item}}</view>
+          </block>
+        </view>
+      </view>
+     <!--下拉框  -->
+      <view class="weui-cell__bd dropdown" bindtap='bindShowMsg'>
+        <span class="dropbtn">智能排序</span>
+        <span class="jiantoudown"></span>
+        <!-- 下拉需要显示的列表 -->
+        <view class="dropdown-content" wx:if="{{select}}">
+          <block wx:for="{{infotype}}" wx:key="this" wx:for-item="item">
+            
+            <view class="dropdown-item" bindtap="mySelect" data-name="{{index}}">{{item}}</view>
+          </block>
+        </view>
+      </view>
+    </view>
  </view>  
 </view>
