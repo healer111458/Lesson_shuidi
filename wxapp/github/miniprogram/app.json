@@ -15,10 +15,10 @@
     "pages/im/room/room"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#1e1e1e",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarBackgroundColor": "#1e1e1e",
+    "navigationBarTitleText": "Github",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
