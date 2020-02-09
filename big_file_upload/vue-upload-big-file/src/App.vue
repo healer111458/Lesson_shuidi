@@ -79,7 +79,7 @@ export default {
     requestList: [] // xhr  
   }),
   methods: {
-    async handleResume () {
+    async handleResume () {   //恢复上传与hash计算
       this.status = Status.uploading;
       const { uploadedList } = await this.verifyUpload(
         this.container.file.name,
@@ -94,7 +94,7 @@ export default {
     resetData () {
       this.requestList.forEach(xhr => xhr.abort())
       this.requestList = [];
-      if (this.container.worker) { //计算hash值
+      if (this.container.worker) { //计算hash值中
         this.container.worker.onmessage = null;
       }
     },
@@ -206,6 +206,8 @@ export default {
       if (uploadedList.length + requestList.length == this.data.length) {
         await this.mergeRequest();
       }
+      await Promise.all(requestList);
+      //如果之前上传的切片数量+本次上传的切片数量=所有切片数量
       console.log('可以发送合并请求了');
     },
     async mergeRequest() {
