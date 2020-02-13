@@ -23,6 +23,7 @@ module.exports = {
     'arrow-parens': 0,
     // allow async-await
     'generator-star-spacing': 0,
+    "quotes": [1, "single"], //引号类型 `` "" ''
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   },

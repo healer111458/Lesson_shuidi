@@ -1,0 +1,39 @@
+.index{
+width: 100%;
+overflow: hidden;
+position: relative;
+.serarch{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 25rpx 0 10rpx;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+
+  div:nth-child(1) {
+    width: 115rpx;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 20rpx;
+    padding-right: 15rpx;
+  }
+  div:nth-child(2) {
+    float: 1;
+    position: relative;
+    
+    input{
+      width: 100%;
+      height: 56rpx;
+      border-radius: 8rpx;
+      box-sizing: border-box;
+      padding-left: 40rpx;
+    }
+  }
+}
+}
