@@ -28,6 +28,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+@import "./style.less";
 
 </style>
