@@ -24,6 +24,26 @@ export default {
             latitude: 0,
             markers: []
         }
+    },
+    mounted() {
+        this.getMapaddress()
+    },
+    methods:{
+        getMapaddress () {
+            let _this = this
+            var myAmapFun =new amapFile.AMapW({key:'4e2273031ffdccfca4d7892f173580c3'})
+            myAmapFun.getRegeo({
+                icoonPath:"/static/images/marker.png",
+                iconWidth:22,
+                iconHeight:32,
+                success(data){
+                    console.log(data)
+                },
+                fail(info) {
+                    console.log(info)
+                }
+            })
+        }
     }
 }
 </script>
