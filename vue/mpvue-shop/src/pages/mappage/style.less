@@ -1,17 +1,39 @@
-.mappagee{
+.mappage{
     height: 100%;
-    background-color: #fff;
-    position: relative; 
+    background: #fff;
+    position: relative;
     .section{
+      height: 30px;
+      width: 100%;
+      input{
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid #c3c3c3;
         height: 30px;
-        width: 100%;
-        input{
-            width: 90%;
-            margin: 0 auto;
-            border: 1px solid #c3c3c3;
-            height: 30px;
-            padding: 0 5px;
-        }
+        border-radius: 3px;
+        padding: 0 5px;
+      }
     }
-
-}
+    .result{
+      width: 40%;
+      padding: 20rpx 0 20rpx 30rpx;
+    }
+  
+    .map_container{
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      right: 0;
+  
+      .title{
+        font-size: 34rpx;
+        font-weight: bold;
+        padding: 20rpx;
+      }
+  
+      .map{
+        width: 95%;
+        height: 500rpx;
+      }
+    }
+  }
