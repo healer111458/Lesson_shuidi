@@ -1,14 +1,11 @@
 const Koa = require('koa')
-const Router = require('koa-router')
-
+const config = require('./config')
 const app = new Koa()
-const router = new Router()
 
-router.get('/index',(ctx,next) => {
-    ctx.body = 'healer'
-})
+const router = require('./routes')
+
 app.use(router.routes())
 
-app.listen(3000,()  => {
-    console.log('serverr at port 3000')
+app.listen(config.port,()  => {
+    console.log(`serverr at port ${config.port}`)
 })
