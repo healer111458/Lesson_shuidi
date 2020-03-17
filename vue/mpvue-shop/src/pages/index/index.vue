@@ -25,7 +25,7 @@
 <script>
 import amapFile from '../../utils/amap-wx.js'
 import { mapState, mapMutations } from 'vuex'
-import { get} from '../../utils'
+import { get } from '../../utils'
 export default {
   data () {
     return{
@@ -34,6 +34,10 @@ export default {
   },
   computed: {
     ...mapState(['cityName'])
+  },
+  mounted () { //生命周期
+    this.getData()
+    //  console.log('-------')
   },
 methods: {
   ...mapMutations(['update']),
@@ -82,9 +86,8 @@ methods: {
     })  
   },
   async getData() {
-    const data = await get('/index/index')  //http://localhost:5757/lm/iindex/index
+    const data = await get('/index/index')  //http://localhost:5757/lm/index/index
     console.log(data)
-
   }
 }
 }
