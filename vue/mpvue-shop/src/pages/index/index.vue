@@ -86,10 +86,13 @@ methods: {
     })  
   },
   async getData() {
+    console.log('-----')
     const data = await get('/index/index')  //http://localhost:5757/lm/index/index
     console.log(data)
+    console('-----')
+    this.banner = data.banner
+    }
   }
-}
 }
 </script>
 
