@@ -51,11 +51,11 @@ function request (url, method, data, header = {}) {
 }
 
 export function get(url, data){
-  // console.log('--------')
+  console.log('--------')
   return request(url, 'GET', data)
 };
 export function post(url, data){
-  return request(url,'POST', data)
+  return request(url, 'POST', data)
 };
 
 export default {
