@@ -1,4 +1,3 @@
-/* eslint-disable */
 var path = require('path')
 var fs = require('fs')
 var utils = require('./utils')
@@ -56,15 +55,6 @@ let baseWebpackConfig = {
   module: {
     rules: [
       {
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter')
-        }
-      },
-      {
         test: /\.vue$/,
         loader: 'mpvue-loader',
         options: vueLoaderConfig
@@ -104,7 +94,7 @@ let baseWebpackConfig = {
           name: utils.assetsPath('fonts/[name].[ext]')
         }
       },
-      {test: /\.less$/, loader: "style-loader!css-loader!less-loader"}
+      { test: /.less$/, loader: "style-loader!css-loader!less-loader" }
     ]
   },
   plugins: [
