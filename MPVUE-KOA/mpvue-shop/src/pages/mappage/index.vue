@@ -36,7 +36,7 @@ export default {
     ...mapMutations(['update']),
     getMapaddress () {
       let _this = this
-      var myAmapFun = new amapFile.AMapWX({key:'4e2273031ffdccfca4d7892f173580c3'})
+      var myAmapFun = new amapFile.AMapWX({key:'256d94ac927c73a25e9177d789a1d060'})
       myAmapFun.getRegeo({
         iconPath: "/static/images/marker.png",
         iconWidth: 22,
@@ -65,7 +65,7 @@ export default {
       // console.log(e)
       let _this = this
       let keywords = _this.keywords
-      var myAmapFun = new amapFile.AMapWX({key:'4e2273031ffdccfca4d7892f173580c3'})
+      var myAmapFun = new amapFile.AMapWX({key:'256d94ac927c73a25e9177d789a1d060'})
       myAmapFun.getInputtips({
         keywords: keywords,
         location: '',
