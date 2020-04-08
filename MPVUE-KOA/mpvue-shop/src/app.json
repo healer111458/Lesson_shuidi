@@ -1,12 +1,13 @@
 {
   "pages": [
-    "pages/index/main",    
+    "pages/category/main",
+    "pages/topic/main",
+    "pages/index/main",
+    "pages/categroylist/main",
     "pages/cart/main",
     "pages/addressSelect/main",
     "pages/order/main",
     "pages/search/main",
-    "pages/topic/main",
-    "pages/category/main",
     "pages/my/main",
     "pages/mappage/main",
     "pages/brandlist/main",
@@ -19,7 +20,13 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "网易严选",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "permission":{
+    "scope.userLocation":{
+      "desc":"你的位置将用于小程序使用"
+    }
   },
   "tabBar": {
     "color": "#666",
@@ -29,32 +36,32 @@
     "list": [
       {
         "pagePath": "pages/index/main",
-        "iconPath": "static/images/home.png",
-        "selectedIconPath": "static/images/home_1.png",
+        "iconPath": "static/images/ic_menu_choice_nor.png",
+        "selectedIconPath": "static/images/ic_menu_choice_pressed.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/topic/main",
-        "iconPath": "static/images/topic.png",
-        "selectedIconPath": "static/images/topic_1.png",
+        "iconPath": "static/images/ic_menu_topic_nor.png",
+        "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
         "text": "专题"
       },
       {
         "pagePath": "pages/category/main",
-        "iconPath": "static/images/category.png",
-        "selectedIconPath": "static/images/category_1.png",
+        "iconPath": "static/images/ic_menu_sort_nor.png",
+        "selectedIconPath": "static/images/ic_menu_sort_pressed.png",
         "text": "分类"
       },
       {
         "pagePath": "pages/cart/main",
-        "iconPath": "static/images/cart.png",
-        "selectedIconPath": "static/images/cart_1.png",
+        "iconPath": "static/images/ic_menu_shoping_nor.png",
+        "selectedIconPath": "static/images/ic_menu_shoping_pressed.png",
         "text": "购物车"
       },
       {
         "pagePath": "pages/my/main",
-        "iconPath": "static/images/my.png",
-        "selectedIconPath": "static/images/my_1.png",
+        "iconPath": "static/images/ic_menu_me_nor.png",
+        "selectedIconPath": "static/images/ic_menu_me_pressed.png",
         "text": "我的"
       }
     ],

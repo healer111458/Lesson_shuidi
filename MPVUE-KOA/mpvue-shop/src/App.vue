@@ -11,7 +11,7 @@ export default {
       province: "Beijing",
       country: "China",
       avatarUrl: "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIbWFEIJj8IpGeHM7dGic1aTFZALjWcMm9ltWfFiaQfVRYticWBfgGfzXWMt2EkJWiaicPtftHAlWxUibxQ/132",
-      watermark: { timestamp: 1535513485, appid: "wx601ce71bde7b9add" }
+      watermark: { timestamp: 1535513485, appid: "wx632ae7e0eb1ccfe2" }
     };
     var openId = userInfo.openId;
     wx.setStorageSync("userInfo", userInfo);
@@ -45,6 +45,7 @@ export default {
 </script>
 
 <style>
+@import url('./iconfont/iconfont.css');
 .container {
   height: 100%;
   display: flex;
