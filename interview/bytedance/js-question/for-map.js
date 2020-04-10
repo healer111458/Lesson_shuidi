@@ -1,54 +1,81 @@
-const fs = require('fs');
-const util = require('util');
-
-fs.readFile('./for-map.js', { encoding: 'utf8' }, (err, file) => {
-  // console.log(file);
-})
-fs.opendir('./', { encoding: 'utf8' }, (err, dir) => {
-  console.log(dir);
-})
-// const fsReadFile  = util.promisify(fs.readFile);
-
-const fsReadDir = util.promisify(fs.opendir);
-// promise 风格 返回 promise
-// promise 化
-fsReadDir('./', { encoding: 'utf8' })
-.then(dir => console.log(dir))
-
-const fsReadFile  = mypromisify(fs.readFile);
-// 最后的参数 是一个回调
-fsReadFile('./for-map.js', { encoding: 'utf8' })
-.then(info => {
-  console.log(info);
-})
-// 写一个 promisify ？？
-function mypromisify(func) {
-  // 返回？
-  return (...args) => {
-    return new Promise((resolve, reject) => {
-      // 文件读取完？
-      func(...args, (err, res) => {
-        if (err) reject(err)
-        resolve(res);
-      })
-    })
+const arr = [ {age: 10}, {age: 20} ]
+// age 年龄总数
+// function sum() {
+//   let sum = 0;
+//   for (0 ~ len - 1) {
+//     sum +=
+//   }
+//   return sum;
+// }
+let sum = arr.reduce((acc, cur) => {
+  // 0 + 10 => 10
+  // 10 + 20 => 30
+  // => 30
+  return acc + cur.age
+}, 0)
+console.log(sum);
+// age * 2
+const newArr = arr.map(e => {
+  return {
+    ...e,
+    age: e.age * 2
   }
-}
-// 1：接受一个函数（具有常见的错误优先的回调风格的函数）
-// 2：promisify(fs.opendir) 返回一个函数
-// 3: 读文件 目录 参数哪里来的？？
-function promisify2(func) {
-  return (...args) => {
-    // fsReadDir 调用 读目录 读文件
-    // 处理完时候 能用 .then 接受我们的结果吗？？
-    // 只能 promise
-    return new Promise((resolve, reject) => {
-      // 啥时候 resolve 结果？？
-      func(...args, (err, res) => {
-        if (err) reject(err)
-        resolve(res);
-      })
-    })
+});
+console.log(newArr)
 
-  }
+// 让 2s 输出 ‘hello world’ 完成 test。
+function test(callback) {
+  // code
+  // cb -> promise -> async
+  setTimeout(() => {
+    callback('hello world', new Error('发生错误'))
+  }, 2000)
 }
+
+test(function(str, err) {
+  console.log(str); // str ===  hello world ??
+});
+
+// fs.readFile('./', (err, file) => {
+
+// })
+// array.forEach(element => {
+  
+// });
+// function foo(str) {
+//   console.log(str);
+// }
+// foo('hello world');
+
+Array.prototype.myMap = function(cb) {
+  let t = [];
+  for (let i =0; i < this.length; i ++) {
+    // 
+    t.push(cb(this[i]));
+  }
+  return t;
+}
+Array.prototype.myMap1 = function(cb) {
+  // let t = [];
+  // for (let i =0; i < this.length; i ++) {
+  //   // 
+  //   t.push(cb(this[i]));
+  // }
+  // return t;
+  return this.reduce((acc, current) => {
+    // [] {age: 20} 
+    let res = cb(current);
+    return acc.concat(res);
+  }, []);
+}
+// 先定义一个 
+// 在返回
+// 写成 reduce
+
+const newArr1 = arr.myMap1(e => {
+  return {
+    ...e,
+    age: e.age * 2
+  }
+});
+console.log(newArr1);
