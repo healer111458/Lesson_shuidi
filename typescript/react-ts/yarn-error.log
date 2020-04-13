@@ -1,0 +1,48 @@
+Arguments: 
+  D:\nodejs\node.exe C:\Users\13033229336\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add webpack-cli webpack-derver
+
+PATH: 
+  D:\app\13033229336\product\11.2.0\dbhome_3\bin;D:\app\13033229336\product\11.2.0\dbhome_1\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;"C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_131\jre\bin;";C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;F:\Git\cmd;D:\nodejs\;C:\Go\bin;C:\Users\13033229336\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\13033229336\AppData\Local\Programs\Python\Python38\;C:\Users\13033229336\AppData\Local\Microsoft\WindowsApps;F:\Microsoft VS Code\bin;C:\Users\13033229336\AppData\Roaming\npm;D:\nodejs;C:\Users\13033229336\go\bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  13.0.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npmjs.org/webpack-derver: Not found
+      at Request.params.callback [as _callback] (C:\Users\13033229336\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66947:18)
+      at Request.self.callback (C:\Users\13033229336\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140665:22)
+      at Request.emit (events.js:210:5)
+      at Request.<anonymous> (C:\Users\13033229336\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141637:10)
+      at Request.emit (events.js:210:5)
+      at IncomingMessage.<anonymous> (C:\Users\13033229336\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141559:12)
+      at Object.onceWrapper (events.js:299:28)
+      at IncomingMessage.emit (events.js:215:7)
+      at endReadableNT (_stream_readable.js:1198:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "react-ts",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start":"webpack-dev-server   --mode development --inline --hot --open",
+      "build":"webpack --mode production"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
