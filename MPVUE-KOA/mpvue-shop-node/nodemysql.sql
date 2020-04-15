@@ -83,9 +83,9 @@ CREATE TABLE `nideshop_address` (
 -- ----------------------------
 -- Records of nideshop_address
 -- ----------------------------
-INSERT INTO `nideshop_address` VALUES ('1', '何玉硕', '111', 'sad发的是', '15175794012', '0', '大法师打发点啥的法撒旦法');
-INSERT INTO `nideshop_address` VALUES ('23', '何玉硕', 'oQmbb4sNZdxaUQZ0sfYgvtOP2S7c', '广东省 广州市 海珠区', '020-81167888', '0', '新港中路397号');
-INSERT INTO `nideshop_address` VALUES ('33', '科比', 'oQmbb4sNZdxaUQZ0sfYgvtOP2S7c', '河北省 石家庄市 桥东区', '123456789', '1', '斯柯达副科级上刊登了附近路口');
+INSERT INTO `nideshop_address` VALUES ('1', 'healer', 'xxx', 'k2', '183xxx', '1', 'healer');
+INSERT INTO `nideshop_address` VALUES ('2', 'faker', 'xxx', '江西省 赣州市 章贡区', '184xxx', 'k2');
+INSERT INTO `nideshop_address` VALUES ('3', 'saber', 'xxx', '河北省 石家庄市 桥东区', '159xxx', 'xxx', 'xxx');
 
 -- ----------------------------
 -- Table structure for nideshop_address_copy
@@ -106,7 +106,7 @@ CREATE TABLE `nideshop_address_copy` (
 -- ----------------------------
 -- Records of nideshop_address_copy
 -- ----------------------------
-INSERT INTO `nideshop_address_copy` VALUES ('1', '何玉硕', '111', 'sad发的是', '15175794012', '0', '大法师打发点啥的法撒旦法');
+INSERT INTO `nideshop_address_copy` VALUES ('1', 'healer', 'k2', 'healer', '183xxx', 'k2', 'healer');
 
 -- ----------------------------
 -- Table structure for nideshop_admin
