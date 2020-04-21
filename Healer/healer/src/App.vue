@@ -6,6 +6,10 @@
     <button id="start">开始</button>
     <button id="end">结束</button>
   </div>
+  <div>
+    <title>healer</title>
+    <span>k2</span>
+  </div>
 </template>
 
 <script>
