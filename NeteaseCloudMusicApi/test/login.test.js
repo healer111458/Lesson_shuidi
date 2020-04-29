@@ -5,7 +5,7 @@ const host = global.host || 'http://localhost:3000'
 console.log('注意: 测试登录需在 test/login.test.js 中填写账号密码!!!');
 
 describe('测试登录是否正常', () => {
-  it('手机登录 code 应该等于200', done => {
+  it('手机登录 code 应该等于200', done => { //登录测试
     const qs = {
       phone: phone,
       password: password
