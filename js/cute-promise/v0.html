@@ -1,0 +1,23 @@
+<!-- 回调 -->
+<script>
+    function test(fn) {
+        //your code in here
+        //形参 -> 实参
+        setTimeout(() => {
+            fn('hello world')
+        },3000) 
+    }
+    test(function(val) {
+        // val === 'hello world'
+        console.log(val)
+    })
+    // 3s 后输出 "hello world"
+    //cb -> priomise -> Co(genrate) -> async
+    //promise三种状态 pending fulfilled rejected
+    new Promise((resolve,reject) => {
+        resolve(1);
+    })
+    .then((val) => {
+        console.log(val);
+    })
+</script>
