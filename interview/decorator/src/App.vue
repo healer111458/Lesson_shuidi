@@ -19,6 +19,7 @@
           <el-popover trigger="hover" placement="top">
             <p>姓名：{{ scope.row.name }}</p>
             <p>住址：{{ scope.row.address }}</p>
+            <p>healer</p>
             <div 
             slot="reference"
             class="name-wrapper">
