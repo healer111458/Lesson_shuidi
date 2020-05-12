@@ -1,0 +1,90 @@
+2020-05-12 15:47:30,997 ERROR 83803 [-/127.0.0.1/-/30ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/lib/application.js:266:15)
+    at Object.get cookies [as cookies] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/app/extend/context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:91:35)
+    at Object.ensureCsrfSecret (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:104:13)
+    at csrf (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/lib/middlewares/csrf.js:15:11)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at /Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+
+pid: 83803
+hostname: shunwuyudeMacBook-Pro.local
+
+2020-05-12 15:50:40,545 ERROR 83803 [-/127.0.0.1/-/4ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/lib/application.js:266:15)
+    at Object.get cookies [as cookies] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/app/extend/context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:91:35)
+    at Object.ensureCsrfSecret (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:104:13)
+    at csrf (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/lib/middlewares/csrf.js:15:11)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at /Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+
+pid: 83803
+hostname: shunwuyudeMacBook-Pro.local
+
+2020-05-12 15:50:57,290 ERROR 83891 [-/127.0.0.1/-/7ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/lib/application.js:266:15)
+    at Object.get cookies [as cookies] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/app/extend/context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:91:35)
+    at Object.ensureCsrfSecret (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:104:13)
+    at csrf (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/lib/middlewares/csrf.js:15:11)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at /Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+
+pid: 83891
+hostname: shunwuyudeMacBook-Pro.local
+
+2020-05-12 15:51:00,358 ERROR 83891 [-/127.0.0.1/-/1ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/lib/application.js:266:15)
+    at Object.get cookies [as cookies] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/app/extend/context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:91:35)
+    at Object.ensureCsrfSecret (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:104:13)
+    at csrf (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/lib/middlewares/csrf.js:15:11)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at /Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+
+pid: 83891
+hostname: shunwuyudeMacBook-Pro.local
+
+2020-05-12 15:51:45,428 ERROR 83891 [-/127.0.0.1/-/1ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/lib/application.js:266:15)
+    at Object.get cookies [as cookies] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/app/extend/context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:91:35)
+    at Object.ensureCsrfSecret (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:104:13)
+    at csrf (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/lib/middlewares/csrf.js:15:11)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at /Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+
+pid: 83891
+hostname: shunwuyudeMacBook-Pro.local
+
+2020-05-12 15:51:47,006 ERROR 83891 [-/127.0.0.1/-/3ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/lib/application.js:266:15)
+    at Object.get cookies [as cookies] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg/app/extend/context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:91:35)
+    at Object.ensureCsrfSecret (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/app/extend/context.js:104:13)
+    at csrf (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/egg-security/lib/middlewares/csrf.js:15:11)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at /Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/shunwuyu/lesson/lesson_shuidi/interview/swagger/swagger-egg/node_modules/koa-compose/index.js:42:32)
+
+pid: 83891
+hostname: shunwuyudeMacBook-Pro.local
+
