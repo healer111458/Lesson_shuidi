@@ -1,0 +1,12 @@
+{
+  "name": "js_optimization",
+  "version": "1.0.0",
+  "description": "- http://www.baidu.com  发生什么？\r   全栈启用https",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

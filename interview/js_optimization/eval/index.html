@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eval</title>
+</head>
+<body>
+    <script>
+      //eval 传统浏览器 安全性不足
+      // fetch
+      const xmlhttp = new XMLHttpRequest(); //IE 6.0 json还未开发
+      xmlhttp.onreadystatechange = function(event){
+        // console.log(event,'++++++++');
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          // console.log(event.target.responseText);
+          // 怎么把ajax text => json 程序里 红宝书
+          //es5 以后才有
+          // const data = JSON.parse(event.target.responseText);
+          // eval js原生方法  把字符串执行成js
+          const data = eval(event.target.responseText);
+          console.log(data);
+        }
+      }
+      xmlhttp.open("GET","./post.json",true);
+      xmlhttp.send(null);
+    </script>
+</body>
+</html>
