@@ -4,6 +4,6 @@ let arr = [0,1,2,3,4,5,6,7,8,9];
 //每个数参与交换
 function shuffle() {
     for(let i = 0; i < arr.length; i++) {
-        
+         n
     }
 }
