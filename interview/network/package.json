@@ -1,0 +1,12 @@
+{
+  "name": "network",
+  "version": "1.0.0",
+  "description": "- web 交互数据格式是什么？ 有没有方法在用户请求时提供多种数据返回格式的选择？\r     ajax json / html\r     传统的浏览器  text/html\r     动态web ajax text/json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
