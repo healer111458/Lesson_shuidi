@@ -195,4 +195,31 @@
           console.log(bar);
         }
         console.log(bar);  //ReferenceError
-      解析：用 let 将变量附加在一个块作用域中 -> 隐式
+      解析：用 let 将变量附加在一个块作用域中 -> 隐式(私有化)
+      eg：
+        var foo = true;
+        if (foo) {
+           { // <-- 显式的快
+              let bar = foo * 2; 
+              bar = something( bar ); 
+              console.log( bar ); 
+           } 
+        }
+        console.log(bar); //ReferenceError
+      解析: 在if声明内部显式地创建了一个块，如果需要对其进行重构，整个块都可以被方便地移动而不会对外部if声明的位置和语义产生任何影响。
+
+        let的重要功能：
+          1. 垃圾收集
+          2. let循环
+    3.4.4 const
+      ES6引入了const，可以创建块作用域变量，但其值是固定常量。之后任何试图修改值的操作都会引起错误。
+      eg:
+        varfoo=true;
+        if(foo){
+          var a=2;
+          const b=3;//包含在if中的块作用域常量
+          a=3;//正常!
+          b=4;//错误!
+        }
+        console.log(a);//3
+        console.log(b);//ReferenceError!
