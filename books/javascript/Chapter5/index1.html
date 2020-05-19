@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包循环问题</title>
+</head>
+<body>
+    <p id="help">Helpful notes will appear here</p>
+    <p>E-mail: <input type="text" id="email" name="email"></p>
+    <p>Name: <input type="text" id="name" name="name"></p>
+    <p>Age: <input type="text" id="age" name="age"></p>
+</body>
+<script>
+    //闭包循环中存在的问题:循环创建问题
+
+    // function showHelp(help) {
+    //     document.getElementById('help').innerHTML = help;
+    // }
+    // function setupHelp() {
+    //     var helpText = [
+    //      {'id': 'email', 'help': 'Your e-mail address'},
+    //      {'id': 'name', 'help': 'Your full name'},
+    //      {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    //     ];
+    // for (var i = 0; i < helpText.length; i++) {
+    //      var item = helpText[i];
+    //      document.getElementById(item.id).onfocus = function() {
+    //         showHelp(item.help);
+    //     }
+    //     }
+    // }
+    // setupHelp(); 
+
+    //解决方法
+    //方法1 创建一个item数组 用数组下标来表示helpText
+
+    // function showHelp(help) {
+    //     document.getElementById('help').innerHTML = help;
+    // }
+    // function makeHelpCallback(help) {
+    //     return function() {
+    //     showHelp(help);
+    //     };
+    // }
+    // function setupHelp() {
+    //     var helpText = [
+    //         {'id': 'email', 'help': 'Your e-mail address'},
+    //         {'id': 'name', 'help': 'Your full name'},
+    //         {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    //     ];
+    //     for (var i = 0; i < helpText.length; i++) {
+    //     var item = helpText[i];
+    //     document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
+    //     }
+    // }
+    // setupHelp(); 
+
+    //方法2  匿名闭包
+    // function showHelp(help) {
+    //     document.getElementById('help').innerHTML = help;
+    // }
+    // function setupHelp() {
+    //     var helpText = [
+    //      {'id': 'email', 'help': 'Your e-mail address'},
+    //      {'id': 'name', 'help': 'Your full name'},
+    //      {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    //     ];
+    //     for (var i = 0; i < helpText.length; i++) {
+    //         (function() {
+    //         var item = helpText[i];
+    //         document.getElementById(item.id).onfocus = function() {
+    //         showHelp(item.help);
+    //         }
+    //         })(); // 马上把当前循环项的item与事件回调相关联起来
+    //     }
+    // }
+    // setupHelp();
+
+    // 方法3 引用let
+
+    function showHelp(help) {
+        document.getElementById('help').innerHTML = help;
+    }
+    function setupHelp() {
+        var helpText = [
+            {'id': 'email', 'help': 'Your e-mail address'},
+            {'id': 'name', 'help': 'Your full name'},
+            {'id': 'age', 'help': 'Your age (you must be over 16)'}
+        ];
+        for (var i = 0; i < helpText.length; i++) {
+            //let 会在迭代中重新初始化  避免了闭包
+            let item = helpText[i];
+            document.getElementById(item.id).onfocus = function() {
+            showHelp(item.help);
+            }
+        }
+    }
+    setupHelp();
+</script>
+</html>
