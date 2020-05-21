@@ -1,0 +1,15 @@
+{
+  "name": "electron-control",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main/index.js",
+  "scripts": {
+    "start:main": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "customize-cra": "^0.9.1"
+  }
+}
