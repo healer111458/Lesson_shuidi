@@ -1,0 +1,12 @@
+{
+  "name": "learn-electron",
+  "version": "1.0.0",
+  "description": "- electron 是 js 在 exe 的应用，在前端效率上的开发非常有帮助。\r   - 滴滴 内部的即时通讯应用 ...\r   - electron 是可跨平台  属于全端开发\r   - RN Flutter Electron",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
