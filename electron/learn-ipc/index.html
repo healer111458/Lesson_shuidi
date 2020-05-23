@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>electron-ipc</title>
+</head>
+<body>
+    <h1>healer</h1>
+    <script>
+        //html 运行在chorimum 以文件运行  是node环境下才能使用require
+        var events = require('events')
+        const { ipcRenderer } = require('electron');
+        
+        console.log(ipcRenderer instanceof events.EventEmitter,'---------')
+        // EventEmitter 是 node 中 异步事件循环机制的实现
+        // createServer 开始后的 on、listen 等API都是events的方法
+        // ipcRenderer 有 send() 方法？  在 node.js 中 
+        // 订阅发布者模式 send 机制
+        // msg_name msg_obj
+        ipcRenderer.send('greet',{
+            message: 'healer main ~'
+        })
+        ipcRenderer.on('greet',(event,args) => {
+            console.log(args)
+        })
+    </script>
+</body>
+</html>
