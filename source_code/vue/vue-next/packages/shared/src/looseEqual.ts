@@ -1,4 +1,4 @@
-import { isObject, isArray } from './'
+import { isObject, isArray } from '.'
 
 export function looseEqual(a: any, b: any): boolean {
   if (a === b) return true

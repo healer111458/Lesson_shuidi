@@ -1,4 +1,4 @@
-import { isArray, isString, isObject, hyphenate } from './'
+import { isArray, isString, isObject, hyphenate } from '.'
 import { isNoUnitNumericStyleProp } from './domAttrConfig'
 
 export type NormalizedStyle = Record<string, string | number>
