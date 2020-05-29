@@ -22,3 +22,60 @@
             console.log( "foo" ); 
             }
             baz(); // <-- baz 的调用位置
+2.2 绑定规则
+   2.2.1 默认绑定
+      最常用的函数调用类型：独立函数调用。
+        eg：
+            function foo() { 
+                console.log(this.a); 
+            } 
+            var a = 2; 
+            foo(); // 2
+        解析：foo()的调用位置是在全局作用域中，调用栈也是全局作用域
+        
+        严格模式：
+            function foo() { 
+                "use strict"; 
+                console.log(this.a); 
+            }
+            var a = 2; 
+            foo(); // TypeError: this is undefined
+   2.2.2 隐式绑定
+        隐式绑定的规则是调用位置是否有上下文对象。
+        eg：
+            function foo() { 
+                console.log( this.a ); 
+            }
+            var obj = { 
+                a: 2, 
+                foo: foo 
+            };
+            obj.foo(); // 2
+        解析：当函数引用有上下文对象时，隐式绑定规则会把函数调用中的 this 绑定到这个上下文对象。因此 this.a 和 obj.a 是一样的。对象属性引用链中只有最顶层或者说最后一层会影响调用位置。
+        eg：
+        function foo() { 
+            console.log( this.a ); 
+        }
+        var obj2 = { a: 42, foo: foo };
+        var obj1 = { a: 2, obj2: obj2 };
+        obj1.obj2.foo(); // 42
+
+        *问题：隐式丢失
+            被隐式绑定的函数会丢失绑定对象，也就是说它会应用默认绑定，从而把 this 绑定到全局对象或者 undefined 上，取决于是否是严格模式。
+            eg：
+                function foo() { 
+                    console.log( this.a ); 
+                }
+                var obj = { a: 2, foo: foo };
+                var bar = obj.foo; // 函数别名！
+                var a = "oops, global"; // a 是全局对象的属性 
+                bar(); // "oops, global"
+            eg：
+                function foo() { 
+                    console.log( this.a ); 
+                    }
+                function doFoo(fn) { //fn 其实引用的是 foo 
+                    fn(); // <-- 调用位置！ 
+                }
+                var obj = { a: 2, foo: foo };
+                var a = "oops, global"; // a 是全局对象的属性 doFoo( obj.foo ); // "oops, global"
