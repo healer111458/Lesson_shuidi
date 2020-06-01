@@ -51,7 +51,7 @@
                 foo: foo 
             };
             obj.foo(); // 2
-        解析：当函数引用有上下文对象时，隐式绑定规则会把函数调用中的 this 绑定到这个上下文对象。因此 this.a 和 obj.a 是一样的。对象属性引用链中只有最顶层或者说最后一层会影响调用位置。
+        解析：当函数引用有上下文对象时，隐式绑定规则会把函数调用中的 this 绑定到这个上下文对象。因此 this.a 和 obj.a 是一样的。对象属性引用链中只有最顶层或者说最后一层会影响调用位置。调用位置会使用 obj 上下文来引用函数，因此你可以说函数被调用时 obj 对象“拥有”或者“包含”它。
         eg：
         function foo() { 
             console.log( this.a ); 
@@ -79,3 +79,28 @@
                 }
                 var obj = { a: 2, foo: foo };
                 var a = "oops, global"; // a 是全局对象的属性 doFoo( obj.foo ); // "oops, global"
+            解析：想要的是输出 a = 2 但实际输出 “opps,global”,是因为bar()被默认是一个函数调用，所以使用了默认调用。
+   2.2.3 显示绑定
+        call() & apply()
+        eg:
+            function foo() { 
+                console.log( this.a ); 
+            }
+            var obj = { 
+                a:2 
+            };
+            foo.call(obj); // 2
+        解析：通过 call() 可以把 this 强制绑定到 obj 上。
+    1. 硬绑定：显式绑定的一个变种
+        eg：
+            function foo() { 
+                console.log( this.a ); 
+            }
+            var obj = { a:2 };
+            var bar = function() { 
+                foo.call(obj); 
+            };
+            bar(); // 2 
+            setTimeout(bar, 100); // 2 
+            // 硬绑定的 bar 不可能再修改它的 this 
+            bar.call(window); // 2
