@@ -28,3 +28,7 @@ mongodb 二维码 状态为登录中，user信息，token 也会传递到PC页�
  1. node 插入一条 qrcode 记录 {qrcode_id,erpires_at,create_at} 生成一个二维码图片
  2. 显示一个 PC 端登录页面 将二维码显示出来
  3. 扫码 达到 qrcodeId 使用 postman 来模拟过程
+ 4. 手机端 登录状态  表单 postman 模拟
+    - 注册 -> 登录  cookie jwt token
+ 5. 手机扫码 走服务器端 将qrcodeId 和 token 结合，判断哪个用户扫码
+ 6. 轮询 
