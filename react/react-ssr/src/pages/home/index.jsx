@@ -8,8 +8,11 @@ class Home extends React.Component {
   componentDidMount() {
     // 浏览器
     // 放心大胆 使用
-    const { getCommentList } = this.props
-    getCommentList();
+    const { getCommentList, commentList } = this.props
+    console.log(commentList);  
+    if (commentList.length === 0) {
+      getCommentList();
+    }
   }
   render() {
     const { commentList } = this.props;

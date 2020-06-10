@@ -115,3 +115,33 @@ localhost:3000/   后端生成一份 store，renderToString， commentList = [],
 
 loadData 里面放置我们当前组件依赖的 ajax 数据
 组件很多的，要把所有的组件依赖的数据都请求？当前访问的页面的组件
+
+
+## 两个 store
+
+```js
+const clientStore = createStore()
+const serverStore = createStore()
+
+```
+1. localhost:3000/
+2. loadData -> ajax -> store(更新的是服务端的 store)
+3. 当我们看到落地页的时候，后端 store 已经更新（也是能够渲染动态页面的保证），渲染出来是一个完整的 html，
+   ```html
+   <li>0</li>
+   <li>1</li>
+   <li>2</li>
+   ```
+4. 但是在 客户端的 store 看来，依然默认数据，这部分页面依然是空的
+5. 以客户端为准，客户端发送的覆盖，（先看到有内容，突然空白了，）
+6. didMount 又发起了前端的 dispatch
+7. 数据请求回来
+8. 前端又渲染了一次
+
+相办法 让 两个 store
+
+## 同步两个 store
+1. 后端的store 已经最新
+2. 后端里面 store 的数据，传给前端
+3. 放到 script 标签里面
+4. 前端这个时候拿到最新的 store，当我们前端创建 store的时候，把从后端store，取到数据当做默认值（前端创建出来的store 和 后端同步的）

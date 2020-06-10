@@ -46,10 +46,10 @@ app.get('*', (req, res) => {
         </head>
         <body>
           <div id="root">${htmlStr}</div>
-          <script src="/index.js"></script>
           <script>
-          const global = {a: 1, b: 2}
+          window.appData = ${JSON.stringify(store.getState())}
           </script>
+          <script src="/index.js"></script>
         </body>
         </html>`);
       })
