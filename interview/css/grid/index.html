@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table {
+          display: table;
+        }
+        .table li {
+          display: table-row;
+          background: #beffee;
+        }
+        .disTable li:nth-child(odd) {
+          background: #bec3ff;
+        }
+        .table li div {
+          width: 100px;
+          line-height: 100px;
+          display: table-cell;
+          
+          text-align: center;
+        }
+        .table li:nth-child(odd) div:nth-child(even) {
+          background: #beffee;
+        }
+        .table li:nth-child(even) div:nth-child(even) {
+          background: #bec3ff;
+        }
+      </style>
+</head>
+<body>
+    <!-- 从现代浏览器布局的发展，grid 布局可以帮我们快速搞定，但考虑到兼容性问题 -->
+    <!-- 布局方案降级选择需要考虑 -->
+    <!-- flex 自适应布局方案，通过flex:1 可以解决 -->
+    <!-- 作为盒模型和 float 布局，结合特定的html结构，在传统低端浏览器中也可以解决 -->
+    <!-- 不过 table display方案 也可以尝试 -->
+    <!-- 九宫格布局也是浏览器布局方案的历史发展 -->
+    
+    
+    
+    <!-- 除了 grid 布局  还有什么方法 -->
+    <ul class="table">
+        <li>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </li>
+        <li>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </li>
+        <li>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </li>
+    </ul>
+</body>
+</html>
