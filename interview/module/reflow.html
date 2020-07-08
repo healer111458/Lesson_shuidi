@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="doma">doma</div>
+  <div id="domb">domb</div>
+  <div id="domc">domc</div>
+  <script>
+    const DomA = document.getElementById('doma');
+    const DomB = document.getElementById('domb');
+    const DomC = document.getElementById('domc');
+
+    // reflow 3次
+    //已知的回流是2次
+    function time() {
+      // 首次不会重排，因为之前没有DOM结构变化，
+      // 浏览器认为 DomA.offsetWidth 是最新的 offsetWidth,所以不需要重排
+      DomA.style.width = DomA.offsetWidth + 1 + 'px';
+      // 强制重排 layout forced,DomA.offsetWidth 引起，
+      // 因为有DOM结构变化，为了给开发者最实时的 offsetWidth 信息，从而强制实行重排
+      DomB.style.width = DomA.offsetWidth + 1 + 'px';
+      // 强制重排 layout forced,DomA.offsetWidth 引起
+      DomC.style.width = DomA.offsetWidth + 1 + 'px';
+      //
+    }
+    setTimeout(() => {
+      time();
+    }, 2000);
+
+  </script>
+</body>
+</html>

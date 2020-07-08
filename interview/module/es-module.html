@@ -1,0 +1,14 @@
+<script type="module">
+console.log('入口文件');
+import { age } from './b.js'
+console.log(age);
+setTimeout(() => {
+    console.log(age);
+},3000);
+    
+    // ESModule
+    //     1. import/exorpt 语句优先执行
+    //     2. tree-shaking: webpack 中打包时优化代码
+    //     3. 方便 JS 引擎做静态分析(在代码还没有运行时)，从而可以得知引入了哪些模块
+    //     4. import 引入的是一个引用
+</script>
