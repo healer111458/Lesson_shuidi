@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #wrap {
+      width: 40px;
+      height: 40px;
+      background-color: brown;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">wrap</div>
+  <script>
+    const wrap = document.getElementById('wrap');
+    wrap.addEventListener('mousedown', () => {
+      function move(e) {
+        console.log('........', e.clientX, e.clientY)
+        wrap.style.transform = 
+        `translate(${e.clientX}px, ${e.clientY}px)`
+      }
+      const handMove = debouce(move, 1000);
+      document.addEventListener('mousemove', handMove);
+    })
+    // 节流
+    // 第一版
+    function throttle(func, wait) {
+      // 初始时间
+      // 事件对象 e
+      
+      var previous = 0;
+      return function () {
+        // 当前时间
+        var args = arguments;
+        var now = +new Date();
+        context = this;
+        // 时间间隔有没有达到 3s 要求
+        console.log(now - previous > wait)
+        if (now - previous > wait) {
+          func.apply(null, args);
+          previous = now;
+        }
+      }
+    }
+    // 第二版
+    function throttle(func, wait) {
+      var timeout;
+      return function () {
+        if (!timeout) {
+          timeout = setTimeout(function () {
+            timeout = null;
+            func();
+          }, wait)
+        }
+      }
+    }
+
+  // 防抖
+  function debouce(func, wait) {
+    var timeout;
+    return function() {
+      // 有人进来，电梯关门的时间顺延
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        func.apply(null, arguments);
+      }, wait);
+    }
+  }
+  </script>
+</body>
+
+</html>

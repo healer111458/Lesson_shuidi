@@ -1,0 +1,69 @@
+<script>
+  function Parent() {
+    this.a = 1
+  }
+  function Child() {
+    Parent.call(this);  // 继承属性
+    this.b = 2;
+  }
+  const arr = [0, 1, 2];
+  // push 
+  // pop
+  // shift ... 
+  // 数组的 api
+  // 备份下来的 push，就是 浏览器默认实现的 push，才有 往数组最后一项追加 元素的 行为
+  // originalPush 默认的 push 的行为就存在它里
+  const originalPush = Array.prototype.push;
+  Array.prototype.push = function() {
+    console.log('监听到数组的变化了');
+    // 恢复 默认行为
+    // this      给哪个数组 追加元素
+    // arguments 追加什么元素
+    return originalPush.apply(this, arguments)
+  }
+
+  const originalPop = Array.prototype.pop;
+  Array.prototype.pop = function() {
+    console.log('监听到数组的变化了')
+    return originalPop.apply(this, arguments)
+  }
+  arr.push(3);
+  arr.push(4);
+  arr.pop();
+
+  // Function.prototype
+  // String.prototype
+  // Object.prototype
+  // function foo() {}
+  // foo.call
+  // foo.apply
+  // foo.bind
+
+  // 我想监听浏览控制台 有没有日志输出
+  // var console = {
+  //   log: function() {
+  //     console.log('我监听到 控制台输出了');
+  //   }
+  // }
+  // console.log(1)
+  function MyArr() {
+
+  }
+  MyArr.prototype.push = function() {
+    // 指向a
+  }
+  let a = new MyArr();
+  a.push()    // [].push
+
+  const originMyPush = MyArr.prototype.push;
+  originMyPush.apply(a);  // 
+
+  let methods = ['pop', 'push', 'shift', 'unshift']
+  methods.forEach((name) => {
+    let original = Array.prototype[name];
+    Array.prototype[name] = function() {
+      console.log('监听到了');
+      return original.apply(this, arguments);
+    }
+  })
+</script>
