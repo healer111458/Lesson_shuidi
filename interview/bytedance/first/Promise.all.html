@@ -1,0 +1,25 @@
+<script>
+    Promise.myAll = function (arr) {
+        // arr[0].then()
+        // arr[1].then()
+        // arr[2].then()
+        return new Promise((resolve, reject) => {
+            let total = 0;     //计数器
+            let res = [];      //存储结果的数组
+            for(let pro of arr) {
+            pro.then(() => {
+                // 完成数量
+                total++;
+                res.push(r);
+                if(total === arr.length) {
+                    resolve(res)
+                }
+            })
+        }
+        })
+    }
+    Promise.myAll()
+    .then(res => {
+
+    })
+</script>
