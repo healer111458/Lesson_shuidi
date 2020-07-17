@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "react": "^16.13.1",
+    "webpack": "^5.0.0-beta.22",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "react-dom": "^16.13.1"
+  }
+}
