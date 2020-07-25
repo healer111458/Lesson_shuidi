@@ -7,13 +7,13 @@ import store from './store/index'
 import routes from './routes/index.js'
 import { HashRouter } from 'react-router-dom';
 
-function App () {
+function App() {
   return (
     <Provider store={store}>
       <HashRouter>
         <GlobalStyle></GlobalStyle>
         <IconStyle></IconStyle>
-        { renderRoutes (routes) }
+        { renderRoutes(routes) }
       </HashRouter>
     </Provider>
   )
