@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const baseUrl = 'http://47.105.150.105/m-api';
+export const baseUrl = 'http://192.168.124.16:3001';
 
 // axios的实例及拦截器配置
 const axiosInstance = axios.create({
@@ -187,3 +187,6 @@ export const alphaTypes = [{
   name: "Z"
 }
 ];
+
+//顶部的高度
+export const HEADER_HEIGHT = 45;
