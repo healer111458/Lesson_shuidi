@@ -23,9 +23,10 @@ import Scroll from './../../baseUI/scroll/index';
 import {connect} from 'react-redux';
 import Loading from '../../baseUI/loading';
 import { CHANGE_CATEGORY, CHANGE_ALPHA, Data } from './data';
+import { renderRoutes } from 'react-router-config';
 
 function Singers(props) {
-  const { singerList, enterLoading, pullUpLoading, pullDownLoading, pageCount } = props;
+  const { singerList, enterLoading, pullUpLoading, pullDownLoading, pageCount, songsCount } = props;
 
   const { getHotSingerDispatch, updateDispatch, pullDownRefreshDispatch, pullUpRefreshDispatch } = props;
 
@@ -39,6 +40,9 @@ function Singers(props) {
     }
     // eslint-disable-next-line
   }, []);
+  const enterDetail = (id)  => {
+    props.history.push(`/singers/${id}`);
+  };
 
   let handleUpdateAlpha = (val) => {
     dispatch({type: CHANGE_ALPHA, data: val});
@@ -65,7 +69,7 @@ function Singers(props) {
         {
           list.map((item, index) => {
             return (
-              <ListItem key={item.accountId+""+index}>
+              <ListItem key={item.accountId+""+index} onClick={() => enterDetail(item.id)}>
                 <div className="img_wrapper">
                   <LazyLoad placeholder={<img width="100%" height="100%" src={require('./singer.png')} alt="music"/>}>
                     <img src={`${item.picUrl}?param=300x300`} width="100%" height="100%" alt="music"/>
@@ -86,7 +90,7 @@ function Singers(props) {
           <Horizen list={categoryTypes} title={"分类(默认热门):"} handleClick={(val) => handleUpdateCatetory(val)} oldVal={category}></Horizen>
           <Horizen list={alphaTypes} title={"首字母:"} handleClick={val => handleUpdateAlpha(val)} oldVal={alpha}></Horizen>
         </NavContainer> 
-        <ListContainer>
+        <ListContainer play={songsCount}>
           <Scroll
             pullUp={ handlePullUp }
             pullDown = { handlePullDown }
@@ -99,6 +103,7 @@ function Singers(props) {
           <Loading show={enterLoading}></Loading>
         </ListContainer>
       </Data>
+      { renderRoutes(props.route.routes) }
     </div>
   )
 }
@@ -108,7 +113,8 @@ const mapStateToProps = (state) => ({
   enterLoading: state.getIn(['singers', 'enterLoading']),
   pullUpLoading: state.getIn(['singers', 'pullUpLoading']),
   pullDownLoading: state.getIn(['singers', 'pullDownLoading']),
-  pageCount: state.getIn(['singers', 'pageCount'])
+  pageCount: state.getIn(['singers', 'pageCount']),
+  songsCount: state.getIn(['player', 'playList']).size
 });
 const mapDispatchToProps = (dispatch) => {
   return {
