@@ -16,22 +16,40 @@ class Xiaojiejie extends Component{
 
             //flex
             <Fragment>
-                {/* healer */}
+                {/* healer
+                healer 注释方法 */}
                 <div>
+                    {/* k2 */}
                     <label htmlFor="healer">增加列表：</label>
-                <input id ='healer' className ='input' value={this.state.inputValue} onChange={this.inputChange.bind(this)} />
+                <input 
+                id ='healer' 
+                className ='input' 
+                value={this.state.inputValue} 
+                onChange={this.inputChange.bind(this)}
+                ref = {(input) => {this.input=input}} 
+                />
                 <button onClick={this.addList.bind(this)} >增加服务</button></div>
-                <ul>
+
+                    <ul ref={(ul)=>{this.ul=ul}}>
                     {
                         this.state.list.map((item,index) => {
-                            return( 
-                                <li
-                                    key={index+item}
-                                    onClick={this.deleteItem.bind(this,index)}
-                                    dangerouslySetInnerHTML={{__html:item}}
-                                >
+                            return(  
+                                // <li
+                                //     key={index+item}
+                                //     onClick={this.deleteItem.bind(this,index)}
+                                //     dangerouslySetInnerHTML={{__html:item}}
+                                // >
+                                // </li>
 
-                                </li>
+                                <XiaojiejieItem 
+
+                                    key= {index+item}
+                                    content={item}
+                                    index={index}
+                                    list={this.state.list}
+                                    deleteItem={this.deleteItem.bind(this)}
+                                />
+
                             )
                         })
                     }
@@ -41,11 +59,11 @@ class Xiaojiejie extends Component{
     }
 
     //输入新服务
-    inputChange(e) {
+    inputChange() {
         // console.log(this)
         // this.state.inputValue = e.target.value
         this.setState({
-            inputValue:e.target.value
+            inputValue:this.input.value
         })
     }
     //增加列表
@@ -54,6 +72,8 @@ class Xiaojiejie extends Component{
             list:[...this.state.list,this.state.inputValue],
             // list:['点菜','上菜',this.state.inputValue]
             inputValue:''
+        },()=>{
+        console.log(this.ul.querySelectorAll('li').length)
         })
     }
     deleteItem(index){
