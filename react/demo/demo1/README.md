@@ -53,3 +53,21 @@
     },() => {
         console.log('-------')
     })
+
+- React 生命周期函数
+    生命周期四大阶段：
+        1. Initalization: 初始化阶段
+        2. Mounting: 挂在阶段
+        3. Updation: 更新阶段
+        4. Unmounting: 销毁阶段
+        
+        1. Initalization:定义属性（props）和状态(state)的阶段
+        2. Mounting：挂载阶段，伴随着整个虚拟DOM的生成，它里边有三个小的生命周期函数：componentWillMount、render、componentDidMount。这也是生命周期的顺序，三者没有前后顺序。
+        * 注意的问题
+            componentWillMount和componentDidMount这两个生命周期函数，只在页面刷新时执行一次，而render函数是只要有state和props变化才会执行。
+        3. Updation：组件发生改变的更新阶段，它有两个基本部分组成，一个是props属性改变，一个是state状态改变。
+            shouldComponentUpdate 函数会在组件更新之前，自动被执行。它要求返回一个布尔类型的结果，必须有返回值。返回true，就同意组件更新;返回false,就反对组件更新。
+            componentWillUpdate 在组件更新之前，但在shouldComponenUpdate 执行之后被执行。但是如果shouldComponentUpdate 返回false，这个函数就不会被执行了。
+            componentDidUpdate 在组件更新之后执行，它是组件更新的最后一个环节。
+            * componentWillReceiveProps 子组件接收到父组件传递过来的参数，父组件render函数重新被执行，这个生命周期就会被执行。
+        4. Unmounting：componentWillUnmount 它是在组件去除时执行。
