@@ -1,14 +1,28 @@
 import React,{Component,Fragment} from 'react'
+import axios from 'axios'
 import './style.css'
 import XiaojiejieItem from './XiaojiejieItem'
+import Dance from './Dance'
 
 class Xiaojiejie extends Component{
     constructor(props){
         super(props)
         this.state = {
             inputValue:'',
-            list:['点菜','上菜']
+            list:[]
         }
+    }
+
+    //axios 优先写在componentDidMount生命周期函数中
+    componentDidMount(){
+        axios.get('https://easy-mock.com/mock/5f3e87d037dd743fd5db5ba6/healer/xiaojiejie')
+        .then((res)=>{
+            console.log('axios 获取成功!'+JSON.stringify(res))
+            this.setState({
+                list:res.data.data
+            })
+        })
+        .catch((error)=>{console.log('获取失败！'+error)})
     }
 
     render(){
@@ -54,6 +68,8 @@ class Xiaojiejie extends Component{
                         })
                     }
                 </ul>
+                
+                <Dance/>
             </Fragment>
         )
     }

@@ -1,1 +1,8 @@
-.input{border:3px solid #ae7000}
+.input{ border:3px solid #ae7000}
+
+.dance-text-enter{opacity: 0;}
+.dance-text-enter-active{opacity: 1;transition: opacity 2000ms;}
+.dance-text-enter-done{opacity: 1;}
+.dance-text-exit{opacity: 1;}
+.dance-text-exit-active{opacity: 0;transition: opacity 2000ms;}
+.dance-text-exit-done{opacity: 0;}

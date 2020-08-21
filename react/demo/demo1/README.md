@@ -71,3 +71,12 @@
             componentDidUpdate 在组件更新之后执行，它是组件更新的最后一个环节。
             * componentWillReceiveProps 子组件接收到父组件传递过来的参数，父组件render函数重新被执行，这个生命周期就会被执行。
         4. Unmounting：componentWillUnmount 它是在组件去除时执行。
+
+- React - axios 数据请求
+    可以在componentDidMount生命周期函数里请求ajax，我也建议在componentDidMount函数里执行，因为在render里执行，会出现很多问题，比如一直循环渲染；在componentWillMount里执行，在使用RN时，又会有冲突。所以强烈建议在componentDidMount函数里作ajax请求。
+
+- axios 请求 EasyMock
+    模拟数据叫做 mock
+
+- css3 react动画
+    
