@@ -3,6 +3,7 @@ import axios from 'axios'
 import './style.css'
 import XiaojiejieItem from './XiaojiejieItem'
 import Dance from './Dance'
+// import K2 from './K2'
 
 class Xiaojiejie extends Component{
     constructor(props){
@@ -68,8 +69,9 @@ class Xiaojiejie extends Component{
                         })
                     }
                 </ul>
-                
+
                 <Dance/>
+                {/* <K2 /> */}
             </Fragment>
         )
     }
