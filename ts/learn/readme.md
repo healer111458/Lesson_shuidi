@@ -89,6 +89,7 @@
         当对象只有一个属性时，定义依旧要使用多对象定义方法
    
    - 数组类型定义
+    
     - 一般数组
         const numberArr = [1,2,3] 
     TS 会解析为：const numberArr:number[] = [1,2,3] 
@@ -122,10 +123,12 @@
             {name:'刘英',age:18},
             {name:'谢大脚',age:28}
         ]
+    
     - 元组
         元组是当数据源为CSV时，才使用的数组定义,它可以指定数组元素的类型
             const xiaojiejie : [string,string ,number]  = ['dajiao','teacher',28]
         当前代码指定了数组中前两个元素为 string,后面一个为 number。
+     
      - 对象型元组
         const xiaojiejies:[string,string,number][]=[
             ['dajiao','teacher',28],
@@ -182,3 +185,128 @@
             [propname:string]:any;
             say():string;
         }
+    
+    - 接口和类的约束
+        class XiaoJieJie implements Girl{
+            name="刘英"
+            age=18
+            bust=90
+            say(){
+                return '欢迎光临 ，红浪漫洗浴！！'
+            }
+        }
+    
+    - 接口继承
+        interface Teacher extends Girl{
+            teach():string
+        }
+
+    *接口只是在TypeScript里帮我们作语法校验的工具，编译成正式的js代码，就不会有任何用处了。
+
+ 4. 类
+   - 类的基本用法
+    class Lady{
+        content='Hi，帅哥'
+        sayHello(){
+            return this.content
+        }
+    }
+    const goddess = new Lady()
+    console.log(goddess.sayHello())
+    
+    当前代码定义了一个 Lady 类，有一个 content 属性和一个 sayHello() 方法，新建一个 Lady 对象，可以访问它的方法
+    
+   - 类的继承
+    class XiaoJieJie extends Lady{
+        sayLove(){
+            return 'I love you'
+        }
+    }
+
+    const goddess = new XiaoJieJie()
+    console.log(goddess.sayHello())
+    console.log(goddess.sayLove())
+
+    当前代码定义了一个 XiaoJiejie 类，它继承 Lady 类，所以可以使用自身方法、属性，也能使用父类的属性、方法。
+  
+   - 类的重写
+        重写就是子类可以重新编写父类里边的代码。
+        
+        class XiaoJieJie extends Lady{
+            sayLove(){
+                return 'I love you!'
+            }
+            sayHello(){
+                 return  'Hi , honey!'
+            }
+        }
+
+        当前代码是通过子类对父类进行重写，在子类中对父类方法直接进行重写。
+   
+   - super 关键字
+        super 关键字代表父类中的方法。
+
+        class XiaoJieJie extends Lady{
+            sayLove(){
+                return 'I love you!'
+            }
+            sayHello(){
+                return  super.sayHello()+'。你好！'
+            }
+        }
+
+        当前代码通过 super 直接将 '你好' 加在父类方法后。
+   
+   - 类的访问类型
+         private、protected 和 public
+
+         class Person {
+            name:string;
+        }
+        const person = new Person()
+        person.name = 'healer'
+        console.log(person.name)
+
+        当前代码输出 healer 是因为我们如果不在类里对name的访问属性进行定义，那么它就会默认是public访问属性。相当于class Person {public name:string;}
+
+        *public 从英文字面的解释就是公共的或者说是公众的，在程序里的意思就是允许在类的内部和外部被调用。
+
+        class Person {
+            public name:string;
+            public sayHello(){
+                 console.log(this.name + 'say Hello')
+            }
+        }
+        --------以下属于类的外部--------
+        const person = new Person()
+        person.name = 'jspang.com'
+        person.sayHello()
+        console.log(person.name)
+
+        *private 访问属性的意思是，只允许再类的内部被调用，外部不允许调用。
+            
+            class Person {
+                private name:string;
+                public sayHello(){
+                    console.log(this.name + 'say Hello')  //此处不报错
+                }
+            }
+            --------以下属于类的外部--------
+            const person = new Person()
+            person.name = 'jspang.com'    //此处报错
+            person.sayHello()
+            console.log(person.name)  //此处报错
+        
+        *protected 允许在类内及继承的子类中使用
+            
+            class Person {
+                protected name:string;
+                public sayHello(){
+                    console.log(this.name + 'say Hello')  //此处不报错
+                }
+            }
+            class Teacher extends Person{
+                public sayBye(){
+                    this.name;  //此处不报错
+                }
+            }
