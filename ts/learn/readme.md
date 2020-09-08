@@ -310,3 +310,55 @@
                     this.name;  //此处不报错
                 }
             }
+   - 类的构造函数
+    - 构造函数的简化
+        class Person{
+            public name :string ;
+            constructor(name:string){
+                this.name=name
+            }
+        }
+        当前代码创建了一个 Person 类，并声明了一个构造函数，它等同于：
+            class Person{
+                constructor(public name:string){
+                }
+            }
+    
+    - 继承的构造函数写法、
+        class Teacher extends Person{
+            constructor(public age:number){
+                super('jspang')
+            }
+        }
+
+    *即使父类没有构造函数，子类也必须调用父类的 super() 方法来创建构造函数。
+   - Getter与Setter
+        对 Private 属性进行封装
+    - get 方法
+        get age(){
+            return this._age - 10
+        }
+        const dajiao = new Xiaojiejie(28)
+        console.log(dajiao.age) //输出 18
+
+    当前代码对 private 属性 _age 进行了 -10 操作，即输出的不是真实 _age
+
+    - set 方法
+        set age(age:number){
+            this._age = age + 3
+        }
+        const dajiao = new Xiaojiejie(18)
+        dajiao.age=25
+        console.log(dajiao.age) //输出 28
+   
+   - 类中的 static
+        class Girl{
+            static a = 'healer'
+            static sayLove(){
+                return 'I Love you'
+            }
+        }
+        console.log(Girl.a) //输出 healer
+        console.log(Girl.sayLove()) //输出 I Love you
+
+        *当一个方法(或属性)使用了静态化声明，那这个方法(或属性)就可以直接调用，而不需要通过对象去调用。
